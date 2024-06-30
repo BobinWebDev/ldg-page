@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  min-height: 100%;
+  width: 100%;
+  background-color: rgba(252, 248, 243, 1);
+  padding: 10px 30px;
+}
+
+#nav {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
+  font-family: "Jost", sans-serif;
+}
+
+#nav #logo {
+  color: black;
+}
+
+#nav #menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+#menu p {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
+#menu #btn {
+  border: 1px solid rgb(90, 89, 89);
+  padding: 10px 15px;
+  border-radius: 1.5rem;
+}
+
+#menu #btn h5 {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  color: rgb(85, 83, 83);
+}
+
+#header {
+  margin-top: 3vh;
+  font-family: "Jost", sans-serif;
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+
+#header h1 {
+  font-family: "Jost", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 6.5rem;
+  line-height: 1;
+  color: rgb(63, 63, 63);
+}
+
+#box {
+  width: 16%;
+}
+
+#paragraph {
+  display: flex;
+  gap: 50px;
+  position: absolute;
+  width: 100%;
+  justify-content: right;
+  right: 2.7vw;
+  bottom: 9%;
+}
+
+#paragraph p {
+  font-size: 0.9rem;
+}
+
+#section1 {
+  aspect-ratio: 16/7;
+  width: 100%;
+  border-radius: 1.5vw;
+  overflow: hidden;
+  margin-bottom: 1%;
+}
+
+#section1 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#page2 {
+  height: 70%;
+  width: 100%;
+}
+
+#page2 .hd {
+  margin-top: 5vh;
+  margin-bottom: 6vh;
+}
+
+.card-container {
+  height: 80%;
+  width: 100%;
+  font-family: "Jost", sans-serif;
+  position: relative;
+}
+
+.container-scroller {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+}
+
+.card-wrapper {
+  position: relative;
+}
+
+.card1,
+.card2 {
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.card1 {
+  height: 330px;
+  width: 250px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 17px 20px;
+  border: 1px solid rgb(203, 203, 203);
+  background-color: white;
+  z-index: 2;
+  position: relative;
+}
+
+.card1 p {
+  font-size: 13px;
+}
+
+.card2 {
+  position: absolute;
+  height: 330px;
+  width: 250px;
+  overflow: hidden;
+  border-radius: 14px;
+  background-color: red;
+  top: 0;
+  z-index: 1;
+}
+
+.card2 img {
+  height: 100%;
+  width: 100%;
+}
+
+.card-wrapper:hover .card1 {
+  transform: rotate(10deg);
+  background-color: rgb(33, 33, 33);
+  color: white;
+  border: none;
+}
+
+.card-wrapper:hover .card2 {
+  transform: rotate(-10deg) translateY(-130px)
+}
+
+@media (max-width: 480px) {
+  #nav {
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+
+  #nav #menu {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    display: none;
+  }
+
+  #header h1 {
+    font-size:2.5rem;
+    text-align: left;
+  }
+
+  #paragraph {
+    gap: 20px;
+    padding: 0 10px;
+    bottom: 0;
+  }
+
+  .p2{
+    display: none;
+  }
+
+  #box {
+    width: 100%;
+  }
+
+  #section1 {
+    margin-top: 3vh;
+    height: 30%;
+    width: 100%;
+  }
+
+  #page2 .hd {
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+  }
+
+  .container-scroller {
+    padding: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  
+  .container-scroller::-webkit-scrollbar{
+    display: none;
+  }
+
+  .card1, .card2 {
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-left: 12px;
+  }
+  .card1 {
+    height: 220px;
+    width: 190px;
+  }
+  .card1 h1{
+    font-size: 16px;
+  }
+  .card1 h6{
+    font-size: 8px;
+  }
+  .card1 p {
+    font-size: 10px;
+  }
+  
+  .card2 {
+    display: none;
+  }
+  
+  
+}
